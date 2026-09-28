@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill" >
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="4"
+            android:rowCount="5" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.4"
+                android:layout_columnSpan="4"
+                android:autoSizeTextType="uniform"
+                android:gravity="end"
+                android:text="0"
+                 />
+
+
+            <Button
+                android:id="@+id/AC_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#C5C3C3"
+                android:text="AC"
+                android:onClick="onACClicked"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/negative_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#C5C3C3"
+                android:text="-"
+                android:onClick="onNegativeClicked"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/percent_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#C5C3C3"
+                android:text="%"
+                android:onClick="onPercentClicked"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/division_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#FF9800"
+                android:text="/"
+                android:onClick="onOperationClicked"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/seven_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#949392"
+                android:onClick="onDigitClicked"
+                android:text="7"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/eight_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#949392"
+                android:onClick="onDigitClicked"
+                android:text="8"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/nine_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#949392"
+                android:onClick="onDigitClicked"
+                android:text="9"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/multiply_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#FF9800"
+                android:text="*"
+                android:onClick="onOperationClicked"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/four_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#949392"
+                android:onClick="onDigitClicked"
+                android:text="4"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/five_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#949392"
+                android:onClick="onDigitClicked"
+                android:text="5"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/six_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#949392"
+                android:onClick="onDigitClicked"
+                android:text="6"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/minus_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#FF9800"
+                android:text="-"
+                android:onClick="onOperationClicked"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/one_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#949392"
+                android:onClick="onDigitClicked"
+                android:text="1"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/two_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#949392"
+                android:onClick="onDigitClicked"
+                android:text="2"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/three_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#949392"
+                android:onClick="onDigitClicked"
+                android:text="3"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/plus_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#FF9800"
+                android:text="+"
+                android:onClick="onOperationClicked"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/zero_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill_horizontal"
+                android:backgroundTint="#949392"
+                android:onClick="onDigitClicked"
+                android:text="0"
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/dot_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#949392"
+                android:onClick="onDigitClicked"
+                android:text="."
+                android:autoSizeTextType="uniform"
+                 />
+
+            <Button
+                android:id="@+id/equals_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#FF9800"
+                android:text="="
+                android:onClick="onEqualsClicked"
+                android:autoSizeTextType="uniform"
+                 />
+
+        </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
