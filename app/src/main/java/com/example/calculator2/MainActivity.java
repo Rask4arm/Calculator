@@ -93,8 +93,4 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.textView);
         textView.setText(display);
     }
-
-    public void onPercentClicked(View view) {
-        updateDisplay("/100");
-    }
 }
