@@ -14,6 +14,9 @@ import androidx.core.view.WindowInsetsCompat;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class MainActivity extends AppCompatActivity {
     public String display="0";
     public int reset = 1;
@@ -67,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             Expression expression = new ExpressionBuilder(expressionString).build();
-            String result = String.valueOf(expression.evaluate());
+            String result = BigDecimal.valueOf(expression.evaluate())
+                    .setScale(10, RoundingMode.HALF_UP).stripTrailingZeros().toPlainString();
 
             resetDisplay(result);
             reset = 1;
