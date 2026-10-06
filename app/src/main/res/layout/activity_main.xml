@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -18,13 +17,26 @@
             android:columnCount="4"
             android:rowCount="6" >
 
+            <Button
+                android:id="@+id/history_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#C5C3C3"
+                android:text="H"
+                android:onClick="onHistoryClicked"
+                android:autoSizeTextType="uniform"
+                android:layout_rowSpan="1"
+                />
+
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="0.1"
-                android:layout_columnWeight="0.4"
-                android:layout_columnSpan="4"
+                android:layout_columnWeight="0.3"
+                android:layout_columnSpan="3"
                 android:autoSizeTextType="uniform"
                 android:gravity="end"
                 android:text="Ringsby, 50871596"
@@ -90,7 +102,7 @@
                 android:layout_columnWeight="0.05"
                 android:autoSizeTextType="uniform"
                 android:backgroundTint="#337DFF"
-                android:onClick="onACClicked"
+                android:onClick="onCClicked"
                 android:text="C" />
 
             <Button
@@ -238,6 +250,18 @@
                  />
 
             <Button
+                android:id="@+id/negative_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="0.1"
+                android:layout_columnWeight="0.1"
+                android:backgroundTint="#C5C3C3"
+                android:text="-"
+                android:onClick="onNegativeClicked"
+                android:autoSizeTextType="uniform"
+                />
+
+            <Button
                 android:id="@+id/zero_button"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -260,18 +284,6 @@
                 android:text="."
                 android:autoSizeTextType="uniform"
                  />
-
-            <Button
-                android:id="@+id/negative_button"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_rowWeight="0.1"
-                android:layout_columnWeight="0.1"
-                android:backgroundTint="#C5C3C3"
-                android:text="-"
-                android:onClick="onNegativeClicked"
-                android:autoSizeTextType="uniform"
-                />
 
             <Button
                 android:id="@+id/equals_button"

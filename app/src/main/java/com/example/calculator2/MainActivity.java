@@ -19,6 +19,7 @@ import java.math.RoundingMode;
 
 public class MainActivity extends AppCompatActivity {
     public String display="0";
+    public String history="";
     public int reset = 1;
 
 
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
             resetDisplay(result);
             reset = 1;
+            history += expressionString + "=" + result + "\n";
         } catch (IllegalArgumentException e) {
             // Handles invalid math syntax entered by the user (e.g., "5++3")
             resetDisplay("Err");
@@ -82,11 +84,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void onACClicked(View view) {
+    public void onCClicked(View view) {
         resetDisplay("0");
         reset = 1;
     }
 
+    public void onACClicked(View view) {
+        resetDisplay("0");
+        history="";
+        reset = 1;
+    }
     public void onNegativeClicked(View view) {
         String result = display;
         for (int i = 1; display.length() - i >= 0 && (Character.isDigit(display.charAt(display.length() - i)) ||
@@ -96,5 +103,15 @@ public class MainActivity extends AppCompatActivity {
         display = result;
         TextView textView = findViewById(R.id.textView);
         textView.setText(display);
+    }
+
+    public void onHistoryClicked(View view) {
+        setContentView(R.layout.history);
+        TextView historyView = findViewById(R.id.historyView);
+        historyView.setText(history);
+    }
+
+    public void onBackClicked(View view) {
+        setContentView(R.layout.activity_main);
     }
 }
