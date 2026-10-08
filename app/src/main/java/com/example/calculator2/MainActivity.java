@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Runs whenever a operation like + or - is clicked
+     * Runs whenever an operation like + or - is clicked
      *
      * @param view
      */
