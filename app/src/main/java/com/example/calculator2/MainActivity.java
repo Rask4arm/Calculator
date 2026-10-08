@@ -17,12 +17,23 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+
+/**
+ * Main class
+ */
 public class MainActivity extends AppCompatActivity {
     public String display="0";
     public String history="";
     public int reset = 1;
 
-
+    /**
+     * Sets up app
+     *
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Runs whenever a digit is clicked
+     *
+     * @param view
+     */
     public void onDigitClicked(View view){
         Button button = (Button) view;
         String digit = button.getText().toString();
@@ -46,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Runs whenever a operation like + or - is clicked
+     *
+     * @param view
+     */
     public void onOperationClicked(View view){
         Button button = (Button) view;
         String operator = button.getText().toString();
@@ -53,18 +74,34 @@ public class MainActivity extends AppCompatActivity {
         updateDisplay(operator);
     }
 
+    /**
+     * This updates the display
+     *
+     * @param character the character that should be added to display
+     */
     public void updateDisplay(String character){
         display += character;
         TextView textView = findViewById(R.id.textView);
         textView.setText(display);
     }
 
+    /**
+     * This resets the display normally after = has been clicked and
+     * the user wants to start a new equation
+     *
+     * @param character the character that should be there when it resets
+     */
     public void resetDisplay(String character){
         display = character;
         TextView textView = findViewById(R.id.textView);
         textView.setText(display);
     }
 
+    /**
+     * This does all the logic when equals is clicked
+     *
+     * @param view
+     */
     public void onEqualsClicked(View view){
         TextView textView = findViewById(R.id.textView);
         String expressionString = textView.getText().toString();
@@ -84,16 +121,32 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Erases everything from the display
+     *
+     * @param view
+     */
     public void onCClicked(View view) {
         resetDisplay("0");
         reset = 1;
     }
 
+    /**
+     * Erases everything from the display and the history
+     *
+     * @param view
+     */
     public void onACClicked(View view) {
         resetDisplay("0");
         history="";
         reset = 1;
     }
+
+    /**
+     * Runs when negative is clicked and puts the negative sign in front of the number
+     *
+     * @param view
+     */
     public void onNegativeClicked(View view) {
         String result = display;
         for (int i = 1; display.length() - i >= 0 && (Character.isDigit(display.charAt(display.length() - i)) ||
@@ -105,12 +158,22 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(display);
     }
 
+    /**
+     * Shows the history page
+     *
+     * @param view
+     */
     public void onHistoryClicked(View view) {
         setContentView(R.layout.history);
         TextView historyView = findViewById(R.id.historyView);
         historyView.setText(history);
     }
 
+    /**
+     * Shows the original page again
+     *
+     * @param view
+     */
     public void onBackClicked(View view) {
         setContentView(R.layout.activity_main);
     }
